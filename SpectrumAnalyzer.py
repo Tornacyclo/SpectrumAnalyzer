@@ -15,5 +15,6 @@ fourier_shift = np.fft.fftshift(fourier)
 magnitude = np.abs(fourier_shift)
 
 # plot the magnitude of the transformed image
-plt.imshow(magnitude, cmap='gray')
+#plt.imshow(magnitude, cmap='gray')
+plt.imshow((magnitude * 255).astype(np.uint8))
 plt.show()
